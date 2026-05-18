@@ -54,9 +54,9 @@ Multi-Omics Data
       ↓
 Preprocessing & Normalization
       ↓
-Patient Similarity Graph Construction
+Patient Similarity Graph Construction (Gene-level)
       ↓
-Omics-specific Graph Convolutions
+Omics-specific Graph Convolutions (Based on Fuzzy Graph Covering)
       ↓
 Cross-Omics Attention Fusion
       ↓
