@@ -2,7 +2,9 @@
 
 FGC-GNN is a fuzzy graph covering based graph neural network framework designed for handling multi-omics datasets to implement cancer prediction tasks
 
-The framework integrates multiple omics modalities including:
+The framework integrates multiple omics modalities 
+into a unified graph-based deep learning architecture.
+like :
 
 BRCA 
 - Gene Expression
@@ -28,7 +30,6 @@ LAML
 - RPPA Proteomics
 
 
-into a unified graph-based deep learning architecture.
 
 ---
 
