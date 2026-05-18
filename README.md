@@ -116,3 +116,75 @@ The pipeline automatically saves:
 - Best model checkpoints
 
 
+## Experimental Setup
+
+All experiments for the proposed FGC-GNN framework were conducted using JupyterLab in a high-performance computing environment equipped with an NVIDIA RTX A5000 GPU and 128 GB RAM. The implementation was developed using Python-based deep learning libraries with GPU acceleration and automatic mixed precision (AMP) training to improve computational efficiency and memory utilization.
+
+# Datasets and Data Splitting
+
+The framework was evaluated on multiple cancer-related multi-omics datasets, including:
+
+BRCA
+ROSMAP
+LUSC
+LAML
+
+For all datasets, the samples were divided into:
+
+80% training/validation set
+20% untouched test set
+
+The held-out test set remained completely unseen during hyperparameter optimization and model selection to ensure unbiased performance evaluation.
+
+# Cross-Validation Strategy
+
+A 5-fold stratified cross-validation strategy was employed on the training portion of the data to preserve class distribution across folds. Hyperparameter optimization was performed independently within the cross-validation process.
+
+For the BRCA dataset, the following hyperparameter search space was used:
+
+PARAM_GRID = {
+    'hidden_channels': [128, 256, 512],
+    'lr'             : [1e-3, 2e-4],
+    'weight_decay'   : [1e-4, 1e-5],
+    'dropout'        : [0.3, 0.5],
+    'focal_gamma'    : [1, 2],
+    'focal_alpha'    : [0.5, 0.75],
+    'epochs'         : [400, 700, 1000],
+}
+
+For the remaining datasets (ROSMAP, LUSC, and LAML), the following parameter configuration was used:
+
+PARAM_GRID = {
+    'hidden_channels': [32, 64, 128],
+    'lr'             : [1e-3, 2e-4],
+    'weight_decay'   : [1e-3, 1e-4],
+    'dropout'        : [0.3, 0.5],
+    'focal_gamma'    : [0.5, 1],
+    'focal_alpha'    : [0.5, 0.75],
+    'epochs'         : [100, 200, 400],
+}
+# Training Configuration
+
+The proposed FGC-GNN model was trained using the following optimization strategy:
+
+Optimizer: AdamW
+Learning Rate Scheduler: Cosine Annealing
+Loss Function: Focal Loss
+Gradient Clipping: Applied to stabilize training
+Early Stopping: Used to prevent overfitting
+Mixed Precision Training: Enabled through AMP for faster computation and reduced GPU memory consumption
+Repeated Evaluation with Multiple Random Seeds
+
+To ensure robustness and reduce randomness-induced bias, the final optimized model was evaluated 10 independent times using different random seeds on the untouched 20% test set. The reported performance metrics represent the aggregated outcomes across these repeated runs.
+
+# Evaluation Metrics
+
+# Model performance was assessed using the following metrics:
+
+AUC
+F1 Score
+Accuracy
+# Reproducibility
+
+The entire experimental pipeline, including preprocessing, graph construction, model training, cross-validation, and evaluation, was automated within the JupyterLab environment to ensure reproducibility and consistency across experiments.
+
