@@ -150,7 +150,11 @@ The held-out test set remained completely unseen during hyperparameter optimizat
 A 5-fold stratified cross-validation strategy was employed on the training portion of the data to preserve class distribution across folds. Hyperparameter optimization was performed independently within the cross-validation process.
 
 For the BRCA dataset, the following hyperparameter search space was used:
+<<<<<<< HEAD
 '''
+=======
+
+>>>>>>> 19ddc84068e6800893c5755c4d3b9e7b2c6b1d8a
 PARAM_GRID = {
     'hidden_channels': [128, 256, 512],
     'lr'             : [1e-3, 2e-4],
@@ -160,10 +164,16 @@ PARAM_GRID = {
     'focal_alpha'    : [0.5, 0.75],
     'epochs'         : [400, 700, 1000],
 }
+<<<<<<< HEAD
 '''
 For the remaining datasets (ROSMAP, LUSC, and LAML), the following parameter configuration was used:
 
 '''
+=======
+
+For the remaining datasets (ROSMAP, LUSC, and LAML), the following parameter configuration was used:
+
+>>>>>>> 19ddc84068e6800893c5755c4d3b9e7b2c6b1d8a
 PARAM_GRID = {
     'hidden_channels': [32, 64, 128],
     'lr'             : [1e-3, 2e-4],
@@ -173,7 +183,10 @@ PARAM_GRID = {
     'focal_alpha'    : [0.5, 0.75],
     'epochs'         : [100, 200, 400],
 }
+<<<<<<< HEAD
 '''
+=======
+>>>>>>> 19ddc84068e6800893c5755c4d3b9e7b2c6b1d8a
 # Training Configuration
 
 The proposed FGC-GNN model was trained using the following optimization strategy:
