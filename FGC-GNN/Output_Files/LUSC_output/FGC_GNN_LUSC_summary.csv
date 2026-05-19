@@ -1,0 +1,2 @@
+Dataset,AUC,F1,Accuracy,Precision,Recall,Threshold,Stopped_Epoch,Best_Val_AUC,Best_Checkpoint_Epoch,CV_best_mean_AUC,CV_best_std_AUC,CV_best_mean_F1,CV_best_mean_Acc,CV_best_mean_thr,HP_hidden_channels,HP_lr,HP_weight_decay,HP_dropout,HP_focal_gamma,HP_focal_alpha,HP_epochs
+LUSC,1.0,0.9949748743718593,0.9950248756218906,1.0,0.99,-1.612476748228073,410,1.0,10,0.9998125,0.0003749999999999698,0.9987421383647799,0.99875,-1.612476748228073,512,0.001,0.0001,0.3,2.0,0.75,700
