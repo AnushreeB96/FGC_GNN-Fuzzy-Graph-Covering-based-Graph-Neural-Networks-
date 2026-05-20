@@ -50,7 +50,7 @@ Multi-Omics Data
       ↓
 Preprocessing & Normalization
       ↓
-Patient Similarity Graph Construction (Gene-level)
+Patient Similarity Graph Construction
       ↓
 Omics-specific Graph Convolutions (Based on Fuzzy Graph Covering)
       ↓
@@ -140,7 +140,7 @@ LAML
 
 For all datasets, the samples were divided into:
 
-80% training/validation set
+80% training set
 20% untouched test set
 
 The held-out test set remained completely unseen during hyperparameter optimization and model selection to ensure unbiased performance evaluation.
