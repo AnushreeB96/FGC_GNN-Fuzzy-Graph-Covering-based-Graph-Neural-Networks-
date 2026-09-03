@@ -1,0 +1,2 @@
+Dataset,AUC,F1,Accuracy,Precision,Recall,Stopped_Epoch,Best_Val_AUC,Best_Checkpoint_Epoch,ES_train_nodes,ES_val_nodes,Test_nodes,CV_mean_AUC,CV_std_AUC,HP_hidden_channels,HP_lr,HP_weight_decay,HP_dropout,HP_focal_gamma,HP_focal_alpha,HP_epochs
+ROSMAP,0.8885257806826434,0.8073394462775193,0.800000011920929,0.800000011920929,0.8148148059844971,265,0.8729096989966556,65,195,49,105,0.926901895206243,0.016793780945614494,128,0.001,0.0001,0.5,1.0,0.75,1000
